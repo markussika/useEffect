@@ -1,15 +1,20 @@
-import App from "./App";
+import React, {useState} from "react";
 
-function ToDo(){
+function ToDo(props){
+
+    const {runcuks, setRuncuks} = useState(props.completed);
+    function handleChange(){
+        setRuncuks(event.target.checked);
+    }
     
     return (
         <>
-        <p>userId: 1</p> 
-    <p>id:1</p>
-    <p>title:"delecatus aut autem</p>
-    <input type = "checkbox"></input>
+        <p>userId: {props.userId}</p> 
+    <p>id:{props.id}</p>
+    <p>{props.title}</p>
+    <input type = "checkbox" checked = {runcuks} onChange = {handleChange}></input>
         </>
-    )
+    );
 }
 
 export default ToDo;

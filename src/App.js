@@ -9,8 +9,10 @@ function App() {
     completed: false,
   };
   return (
-    <h1>stuff</h1>
-  )
+    
+      <ToDo {...toDo}/>
+    
+  );
 }
 
 export default App;
