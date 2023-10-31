@@ -3,7 +3,7 @@ import React, {useState} from "react";
 function ToDo(props){
 
     const {runcuks, setRuncuks} = useState(props.completed);
-    function handleChange(){
+    function handleChange(event){
         setRuncuks(event.target.checked);
     }
     
