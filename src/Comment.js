@@ -1,26 +1,22 @@
 
 
-
-
-
 function Comment() {
-    const [comment, setComment] = useState({});
-    const [loading, setLoading] = useState(true);
-    
-  useEffect(() => {
-    getComment();
-    async function getComment(){
-      const response = await fetch("https://jsonplaceholder.typicode.com/todos/3");
+  const [toDo, setToDo] = useState({});
+  const [loading, setLoading] = useState(true);
   
-      const data = await response.json();
-      setComment(data);
-      
-    setLoading(false);
-    }
-    getComment();
-  }, [])}
+useEffect(()=>{
+  async function getToDo(){
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/3"
+    );
+    const data = await response.json();
+      setToDo(data);
+      setLoading(false);
+    
+  }
+  getToDo();
+},[]);
+  return <h2>Glu glu</h2>;
+}
 
-
-
-
-  export default Comment;
+export default Comment;
