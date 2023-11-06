@@ -1,13 +1,13 @@
-function Post(){
+function Post(props){
     return (
         <>
         <div>
-            <p>UserId: 1</p>
-      <p>Id: 1</p>
-      <p>title: virsraksts</p>
-      <p>body: teksts</p>
+    <p>UserId: {props.userId}</p>
+      <p>Id: {props.id}</p>
+      <p>title: {props.title}</p>
+      <p>body: {props.body}</p>
         </div>
         </>
     )
 }
-export default Post();
+export default Post;

@@ -3,6 +3,7 @@ import ToDo from "./ToDo";
 import Comment from "./Comment";
 
 import Post from "./Post"
+import PostList from "./PostList"
 
 function App() {
   const [toDo, setToDo] = useState({});
@@ -31,8 +32,8 @@ useEffect(()=>{
   return (
     <>
       {loading ? <p>loading...</p> : <ToDo {...toDo}/> }
-      <Comment />
-      <Post />
+    <PostList  />;
+      
     </>
   );
 }
